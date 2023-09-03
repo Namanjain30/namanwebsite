@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import { Managerproduct } from '../AppContext/Fullproductcontext'
 import { FaCheck } from 'react-icons/fa'
 import Formatprice from './Formatprice'
+import '../App.css'
 
 const Filtersection = () => {
-  const {filter:{text,category,colored,maxvalue,minvalue,price},underrated,allproduct,clearall} = Managerproduct()
+  const {filter:{text,category,colored,maxvalue,minvalue,price},underrated,allproduct,clearall,click} = Managerproduct()
   
   const getvalues = (allproduct,product)=>{
     let load = allproduct.map((curr)=>{
@@ -33,7 +34,7 @@ const Filtersection = () => {
       {
         correctvalue.map((elem,index)=>{
           return(
-            <button key={index} name='category' value={elem} onClick={underrated}>
+            <button  key={index} name='category' value={elem} onClick={underrated}>
             {elem}
           </button>
           )

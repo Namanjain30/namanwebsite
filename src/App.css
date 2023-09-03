@@ -1225,3 +1225,8 @@ h5{
     grid-template-columns: 1fr ;
   }
 }
+
+.headercolor{
+  font-weight: bold;
+  border-bottom: 1px solid red;
+}
