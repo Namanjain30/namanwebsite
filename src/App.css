@@ -93,6 +93,7 @@ h2{
   }
   .active .ulheader{
     display: flex;
+    z-index: 3;
     position: absolute;
     /* left: 235px; */
     
@@ -137,7 +138,7 @@ h2{
 .contant{
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   margin-top: 62px;
   margin-right: 22px;
   width: 41vw;
@@ -218,7 +219,7 @@ h2{
   .contant{
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     margin-top: 62px;
     margin-right: 22px;
     width: 84vw;
@@ -466,7 +467,7 @@ textarea{
     flex-direction: column;
     /* align-items: center; */
     /* justify-content: center; */
-    align-items: start;
+    align-items:flex-start;
 }
 
 .sfthree{
@@ -963,7 +964,7 @@ a{
 .contentfiltersection{
   display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     background-color: white;
     height: 174px;
     justify-content: space-around;
@@ -1228,5 +1229,9 @@ h5{
 
 .headercolor{
   font-weight: bold;
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid blue;
 }
+.borderbottom{
+  border-bottom: 1px solid black;
+}
+

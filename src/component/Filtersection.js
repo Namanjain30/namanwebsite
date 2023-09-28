@@ -21,7 +21,7 @@ const Filtersection = () => {
   const correctvalue = getvalues(allproduct,"category")
   const companyvalue = getvalues(allproduct,"company")
   const colorvalue = getvalues(allproduct,"colors")
-  const [color,setcolor] = useState(colorvalue[0])
+  const [color,setcolor] = useState('all')
   return (
     <>
     <div className="form">
@@ -34,7 +34,7 @@ const Filtersection = () => {
       {
         correctvalue.map((elem,index)=>{
           return(
-            <button  key={index} name='category' value={elem} onClick={underrated}>
+            <button className={elem==='all'?'borderbottom':'none'}  key={index} name='category' value={elem} onClick={underrated}>
             {elem}
           </button>
           )

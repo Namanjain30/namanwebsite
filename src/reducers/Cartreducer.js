@@ -50,9 +50,9 @@ const Cartreducer = (state,action)=>{
                 let main = state.cart.map((curr)=>{
                     if(curr.id === action.payload){
                         let decreamount = curr.additem -1
-                        if(decreamount <=1 ){{
+                        if(decreamount <=1 ){
                             decreamount = 1
-                        }}
+                        }
                         return {
                             ...curr,
                             additem:decreamount
@@ -72,9 +72,9 @@ const Cartreducer = (state,action)=>{
                     let main2 = state.cart.map((curr)=>{
                         if(curr.id === action.payload){
                             let decreamount = curr.additem +1
-                            if(decreamount >= curr.max ){{
+                            if(decreamount >= curr.max ){
                                 decreamount = curr.max
-                            }}
+                            }
                             return {
                                 ...curr,
                                 additem:decreamount

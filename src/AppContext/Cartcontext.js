@@ -3,18 +3,19 @@ import reducer from "../reducers/Cartreducer";
 
 const Cartcontex = createContext()
 
-const getlocalcartdata = ()=>{
-    let newcartdata = localStorage.getItem("namancart")
-    if(newcartdata === []){
-        return []
-    }
-    else{
-        return (JSON.parse(newcartdata))
-    }
-}
+// const getlocalcartdata = ()=>{
+//     let newcartdata = localStorage.getItem("namancart")
+//     console.log(newcartdata)
+//     if(newcartdata === []){
+//         return []
+//     }
+//     else{
+//         return (JSON.parse(newcartdata))
+//     }
+// }
 
 const initialstate = {
-    cart:getlocalcartdata(),
+    cart:[],
     total_item:"",
     total_amount:"",
     shipping_amount:5000

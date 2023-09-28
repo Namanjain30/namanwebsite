@@ -8,15 +8,15 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 const Nav = () => {
   const [select,setselect] = useState(false)
-  const {cart,total_item} = Cartmain()
+  const {cart} = Cartmain()
   const { loginWithRedirect,logout,isAuthenticated } = useAuth0();
   return (
     <div className={select ? "active innerheader" : "innerheader"}>
       <ul className="ulheader">
-        <li> <NavLink to="/" style={({ isActive }) => ({ color: isActive ? 'red' : 'black' })} onClick={()=> setselect(false)}> Home </NavLink> </li>
-        <li> <NavLink to="/about" style={({ isActive }) => ({ color: isActive ? 'red' : 'black' })} onClick={()=> setselect(false)}> About </NavLink> </li>
-        <li> <NavLink to="/contact" style={({ isActive }) => ({ color: isActive ? 'red' : 'black' })} onClick={()=> setselect(false)}> Contact </NavLink> </li>
-        <li> <NavLink to="/product" style={({ isActive }) => ({ color: isActive ? 'red' : 'black' })} onClick={()=> setselect(false)}> Product </NavLink> </li>
+        <li> <NavLink to="/" style={({ isActive }) => ({ color: isActive ? 'blue' : 'black' })} onClick={()=> setselect(false)}> Home </NavLink> </li>
+        <li> <NavLink to="/about" style={({ isActive }) => ({ color: isActive ? 'blue' : 'black' })} onClick={()=> setselect(false)}> About </NavLink> </li>
+        <li> <NavLink to="/contact" style={({ isActive }) => ({ color: isActive ? 'blue' : 'black' })} onClick={()=> setselect(false)}> Contact </NavLink> </li>
+        <li> <NavLink to="/product" style={({ isActive }) => ({ color: isActive ? 'blue' : 'black' })} onClick={()=> setselect(false)}> Product </NavLink> </li>
         {isAuthenticated?(<li><button className='bttn1' onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
       Log Out
     </button></li>):(<li><button className='bttn1' onClick={() => loginWithRedirect()}>Log In</button></li>)}

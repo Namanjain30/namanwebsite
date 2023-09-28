@@ -4,6 +4,7 @@ import reducer from '../reducers/Productreducer'
 
 const AppContext = createContext()
 const url = 'https://api.pujakaitem.com/api/products'
+const url2 = 'http://localhost:8000/start'
 const initialstate = {
     isloading: false,
     iserror: false,
@@ -21,6 +22,7 @@ const AppProvider = ({children})=>{
         try{
          const res = await axios.get(url)
         const product = await res.data
+        
         dispatch({type:"MY_API_DATA", payload : product})
         
         }
